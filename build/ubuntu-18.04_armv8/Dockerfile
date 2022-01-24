@@ -22,8 +22,8 @@ RUN --mount=type=cache,id=$PACKAGE_NAME,target=/var/cache/apt --mount=type=cache
 
 # 構築した RootFS を Jetson Nano のファイルで上書きする
 
-COPY jetson.sh /root/
-RUN /root/jetson.sh
+# COPY jetson.sh /root/
+# RUN /root/jetson.sh
 
 # WebRTC の取得
 
@@ -53,6 +53,7 @@ RUN \
       -D_LIBCPP_ABI_UNSTABLE \
       -D_LIBCPP_DISABLE_AVAILABILITY \
       -nostdinc++ \
+      -isystem/root/webrtc/src/buildtools/third_party/libc++/trunk/include \
       -isystem/root/llvm/libcxx/include \
       --target=aarch64-linux-gnu \
       --sysroot=/root/rootfs \
