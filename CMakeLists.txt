@@ -195,6 +195,9 @@ elseif(MOMO_PACKAGE_NAME STREQUAL "ubuntu-18.04_armv8")
   set(USE_LIBCXX ON)
   set(LIBCXX_INCLUDE_DIR /root/llvm/libcxx/include)
 
+  set(CMAKE_C_COMPILER clang-10)
+  set(CMAKE_CXX_COMPILER clang++-10)
+
 elseif(MOMO_PACKAGE_NAME STREQUAL "ubuntu-18.04_armv8_jetson_xavier")
 
   set(TARGET_OS "linux")

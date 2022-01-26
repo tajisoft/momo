@@ -25,7 +25,10 @@ apt-get -y install \
   sudo \
   vim \
   xz-utils \
-  libpthread-stubs0-dev
+  libpthread-stubs0-dev \
+  g++-aarch64-linux-gnu \
+  qemu-user-binfmt \
+  libsdl2-dev
 
 # Ubuntu 18.04 で multistrap が動かない問題の修正。
 # https://github.com/volumio/Build/issues/348#issuecomment-462271607 を参照
