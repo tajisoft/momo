@@ -186,7 +186,6 @@ case "$PACKAGE" in
       --build-arg SDL2_VERSION=$SDL2_VERSION \
       --build-arg CLI11_VERSION=$CLI11_VERSION \
       --build-arg CMAKE_VERSION=$CMAKE_VERSION \
-      --build-arg CUDA_VERSION=$CUDA_VERSION \
       --build-arg PACKAGE_NAME=$PACKAGE \
       $PACKAGE
 
